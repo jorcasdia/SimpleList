@@ -21,6 +21,6 @@ class Database {
         vector<string> list;
         string name;
         
-        void write();
+        void write(vector<string> list);
         void read();
 };

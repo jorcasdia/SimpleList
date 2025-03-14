@@ -1,11 +1,13 @@
 #include "include/database.h"
 
-void Database::write() {
+void Database::write(vector<string> list) {
     ofstream db;
     db.open("db/lists.sl");
 
     if (db.is_open()) {
-        db << "1\n2\n3\n4\n5\n";
+        for (size_t list_index = 0; list_index < list.size(); list_index++) {
+            db << list[list_index] << "\n";
+        }
         
     } else {
         cout << "Cannot open file for writing.";
@@ -16,10 +18,16 @@ void Database::read() {
     string line;
     ifstream db;
     db.open("db/lists.sl");
-    
+
     if (db.is_open()) {
         while (getline(db, line, '\n')) {
-            cout << line << endl;
+            if (line.front() == '#') {
+
+            } else if (line.front() == '%') {
+
+            } else {
+                
+            }
         }
         
     } else {
