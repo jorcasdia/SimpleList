@@ -1,4 +1,5 @@
 #include "include/list.h"
+#include "include/database.h"
 
 int main(int argc, char const *argv[])
 {
@@ -10,6 +11,9 @@ int main(int argc, char const *argv[])
         cout << "Username not supplied... exiting the program" << endl;
     }
 
+    Database data;
+    data.write();
+    
     return 0;
 }
 
