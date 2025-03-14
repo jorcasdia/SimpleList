@@ -8,9 +8,9 @@ int main(int argc, char const *argv[])
 
     if (argc > 1) {
         simpleList.name = string(argv[1]);
-        simpleList.print_menu();
-        data.write(simpleList.list);
         data.read();
+        simpleList.print_menu();
+
     } else {
         cout << "Username not supplied... exiting the program" << endl;
     }
