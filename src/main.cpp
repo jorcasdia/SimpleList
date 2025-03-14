@@ -13,6 +13,7 @@ int main(int argc, char const *argv[])
 
     Database data;
     data.write();
+    data.read();
     
     return 0;
 }

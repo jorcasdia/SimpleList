@@ -15,6 +15,8 @@ void Database::write() {
 void Database::read() {
     string line;
     ifstream db;
+    db.open("db/lists.sl");
+    
     if (db.is_open()) {
         while (getline(db, line, '\n')) {
             cout << line << endl;
